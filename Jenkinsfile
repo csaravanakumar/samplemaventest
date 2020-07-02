@@ -8,4 +8,9 @@ node{
         bat 'mvn package'
         echo "package completed"
     }
+    stage('Docker Build') {
+      agent any
+      steps {
+        bat 'docker build -t saravanakumarc/sample_test_1:latest .'
+      }
 }
