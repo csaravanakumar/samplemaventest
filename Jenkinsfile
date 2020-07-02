@@ -13,4 +13,13 @@ node{
       steps {
         bat 'docker build -t saravanakumarc/sample_test_1:latest .'
       }
+    stage('Docker Push') {
+      agent any
+      steps {
+        withCredentials([usernamePassword(credentialsId: 'dockerHub', passwordVariable: 'Kodaisaro1505', usernameVariable: 'saravanakumarc')]) {
+          bat "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPassword}"
+          bat 'docker push saravanakumarc/sample_test_1:latest'
+        }
+      }
+    }
 }
