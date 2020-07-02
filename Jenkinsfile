@@ -13,6 +13,7 @@ node{
       steps {
         bat 'docker build -t saravanakumarc/sample_test_1:latest .'
       }
+    }
     stage('Docker Push') {
       agent any
       steps {
