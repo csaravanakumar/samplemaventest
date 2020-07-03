@@ -10,7 +10,6 @@ node{
     }
     stage(' Maven Test') {
         def mavhome=tool name: 'maven-3', type: 'maven'
-        sh '${mavhome}/bin/mvn clean package'
         echo "test completed"
         }
     stage('Push Image') {
