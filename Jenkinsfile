@@ -9,9 +9,7 @@ node{
         echo "package completed"
     }
     stage('docker image'){
-    agent {
-        docker { image 'node:7-alpine' }
-    }
+            docker { image 'node:7-alpine' }
     }
         stage('Test') {
             steps {
