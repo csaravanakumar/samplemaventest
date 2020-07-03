@@ -8,12 +8,4 @@ node{
         bat 'mvn package'
         echo "package completed"
     }
-    stage('docker image'){
-            docker { image 'node:7-alpine' }
-    }
-        stage('Test') {
-            steps {
-                bat 'node --version'
-            }
-        }
-    }
+}
