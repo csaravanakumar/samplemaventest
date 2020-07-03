@@ -14,7 +14,8 @@ node{
             node {
                 label 'DockerDefault'
             }
-         }
+        }
+    }
     stage('Docker Build') {
       agent any
       steps {
