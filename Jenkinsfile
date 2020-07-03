@@ -8,4 +8,11 @@ node{
         bat 'mvn package'
         echo "package completed"
     }
+    stage(' Maven Test') {
+        
+          echo "code checked in"
+    }
+    stage('Push Image') {
+         echo "code checked in"
+    }
 }
