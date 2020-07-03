@@ -5,15 +5,15 @@ node{
     }
     stage('compile-package'){
     def mavhome=tool name: 'maven-3', type: 'maven'
-        bat 'mvn package'
+        sh "${mavhome}/bin/mvn package"
         echo "package completed"
     }
     stage(' Maven Test') {
         def mavhome=tool name: 'maven-3', type: 'maven'
-        bat 'mvn clean package'
+        sh '${mavhome}/bin/mvn clean package'
         echo "test completed"
         }
     stage('Push Image') {
-         echo "code checked in"
+         echo "wait for push"
     }
 }
