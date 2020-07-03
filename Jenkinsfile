@@ -9,9 +9,10 @@ node{
         echo "package completed"
     }
     stage(' Maven Test') {
-        
-          echo "code checked in"
-    }
+        def mavhome=tool name: 'maven-3', type: 'maven'
+        bat 'mvn clean package'
+        echo "test completed"
+        }
     stage('Push Image') {
          echo "code checked in"
     }
