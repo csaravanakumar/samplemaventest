@@ -1,6 +1,6 @@
 node{
     agent {
-        label 'SaravananCloud'
+        label 'JenkinsSlave1'
     }
     stage('Checkout'){
     git 'https://github.com/csaravanakumar/samplemaventest'
