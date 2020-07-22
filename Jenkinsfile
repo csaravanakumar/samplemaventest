@@ -1,6 +1,6 @@
 node{
     agent {
-        label 'JenkinsSlave1'
+        label 'EC2StaticJenkinsSlaveFinal'
     }
     stage('Checkout'){
     git 'https://github.com/csaravanakumar/samplemaventest'
